@@ -1,5 +1,6 @@
 <?php
 
+
 class LaravelRoutesTest extends TestCase
 {
     /**

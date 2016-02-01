@@ -13,13 +13,7 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        'App\Console\Commands\Inspire',
-        'App\Console\Commands\AngularFeature',
-        'App\Console\Commands\AngularDialog',
-        'App\Console\Commands\AngularDirective',
-        'App\Console\Commands\AngularService',
-        'App\Console\Commands\AngularFilter',
-        'App\Console\Commands\AngularConfig',
+        \App\Console\Commands\Inspire::class,
     ];
 
     /**

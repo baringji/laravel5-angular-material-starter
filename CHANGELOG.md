@@ -1,5 +1,81 @@
 ## Changelog
 
+### 3.1.0
+- added favicon
+- faster elixir setup
+- combined generated directive definition and controller
+- **[Breaking]** ability to pass options to DialogService instead of defaulting to $scope [#141](https://github.com/jadjoubran/laravel5-angular-material-starter/issues/141)
+- **[Breaking]** Update angular folder structure/naming [#142](https://github.com/jadjoubran/laravel5-angular-material-starter/issues/142)
+- reverted to `gulp-minify-css` [#144](https://github.com/jadjoubran/laravel5-angular-material-starter/issues/144)
+- **[Breaking]** EcmaScript 6 generators thanks to [@jsalhani](https://github.com/jsalhani) [#152](https://github.com/jadjoubran/laravel5-angular-material-starter/pull/152)
+- **[Breaking]** Ignore (stop tracking) public/js and public/css
+- **[Breaking]** Remove all controllers to promote components (Angular 1.5) [#154](https://github.com/jadjoubran/laravel5-angular-material-starter/issues/154)
+- **[Breaking]** Speed up tests by deferring creation of JWT [#153](https://github.com/jadjoubran/laravel5-angular-material-starter/issues/153)
+
+### 3.0.6
+- npm dependencies cleanup [#133](https://github.com/jadjoubran/laravel5-angular-material-starter/issues/133)
+- updated to laravel-elixir 4
+- fixed restangular issue with the release of lodash 4
+
+### 3.0.5
+- added iOS temporary fix/hack (flex issues) [#130](https://github.com/jadjoubran/laravel5-angular-material-starter/issues/130)
+
+### 3.0.4
+- Design fixes for Landing demo
+- Demo is now responsive on mobile
+- Fixed issue when creating a new project (caused by missing .ebextensions folder)
+
+### 3.0.3
+- Design fixes for Landing demo
+
+### 3.0.2
+- Livereload does not work when using `php artisan serve` [#120](https://github.com/jadjoubran/laravel5-angular-material-starter/issues/120)
+
+### 3.0.0
+- Extended documentation & moved out of the repository: [Docs](https://laravel-angular.readme.io)
+- Upgraded to Angular Material ~1.0
+- Follow angular best practices (John Papa's style guide) in demo
+- Follow angular best practices (John Papa's style guide) in Angular Generators
+- Group all demo functionality in 1 folder so they can be easily removed
+- Removed demo specific code
+- Out of the box support for $templateCache (templates loaded in a single js file instead of ajax)
+- New Logo
+- REST API test helpers
+- JWT test helpers
+- API Response macros (success & error) inline with restangular config
+- Restangular error interceptor to show validation errors in dialog
+- eslint instead of jshint. Eslint configured according to Angular best practices
+- Added getting started guide (available in documentation docs)
+- Moved artisan generators to a different repository. However they're loaded by default here
+- Started with a fresh Laravel 5.1 installation
+- Removed the need to add full namespace in routes (because of dingo/api)
+- Out of the box JWT Setup
+
+### 2.10.2
++ Out of the box laravel-cors [#69](https://github.com/jadjoubran/laravel5-angular-material-starter/issues/69)
++ Rename `$scope` and `$attrs` to `scope` and `attrs` in directive generator [#63](https://github.com/jadjoubran/laravel5-angular-material-starter/issues/63)
++ Added model factory support [#71](https://github.com/jadjoubran/laravel5-angular-material-starter/issues/71)
++ Fixed livereload when working in vagrant [#77](https://github.com/jadjoubran/laravel5-angular-material-starter/pull/77)
++ Added DialogService confirm method [#44](https://github.com/jadjoubran/laravel5-angular-material-starter/issues/44)
++ Fixed JWT auth bug [#82](https://github.com/jadjoubran/laravel5-angular-material-starter/pull/82)
+
+### 2.10.1
++ Fixed default cipher [#60](https://github.com/jadjoubran/laravel5-angular-material-starter/issues/60)
++ Fixed dingo/api validation issue [#58](https://github.com/jadjoubran/laravel5-angular-material-starter/issues/58)
++ added phpUnit to gulpfile
+
+### 2.10.0
++ dingo/api integration with jwt auth [#43](https://github.com/jadjoubran/laravel5-angular-material-starter/issues/43)
++ fixed deploy.sh script to migrate in production [#56](https://github.com/jadjoubran/laravel5-angular-material-starter/issues/56)
++ fixed links in generators documentation [#55](https://github.com/jadjoubran/laravel5-angular-material-starter/issues/55)
++ updated generators to match Demo layout [#54](https://github.com/jadjoubran/laravel5-angular-material-starter/issues/54)
+
+### 2.9.1
++ responsive layout on mobile by [@Bodom78](https://github.com/Bodom78) - [#34](https://github.com/jadjoubran/laravel5-angular-material-starter/issues/34#issuecomment-140406965)
++ unit test coverage for artisan ng:* generators [#42](https://github.com/jadjoubran/laravel5-angular-material-starter/issues/42)
++ unit test coverage to safely deploy using deploy.sh [#42](https://github.com/jadjoubran/laravel5-angular-material-starter/issues/42)
++ remove route:clear and config:clear from deploy.sh [#47](https://github.com/jadjoubran/laravel5-angular-material-starter/issues/47)
+
 ### v2.9.0
 + improved description of ng:* generators
 + moved planned features to github issues

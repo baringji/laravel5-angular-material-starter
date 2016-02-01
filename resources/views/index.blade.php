@@ -1,31 +1,30 @@
 <!doctype html>
-<html ng-app="app">
+<html ng-app="app" ng-strict-di>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <link rel="stylesheet" href="{!! asset('css/vendor.css') !!}">
     <link rel="stylesheet" href="{!! asset('css/app.css') !!}">
-    <link rel="stylesheet" href="{!! asset('css/prism.css') !!}">
-    <link href='//fonts.googleapis.com/css?family=Roboto:500,400' rel='stylesheet' type='text/css'>
-    <title>Laravel 5 angular material starter</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <title>Laravel Angular Material Starter</title>
     <!--[if lte IE 10]>
     <script type="text/javascript">document.location.href = '/unsupported-browser'</script>
     <![endif]-->
 </head>
 <body>
 
-<header ui-view="header"></header>
-<div ui-view="sidebar"></div>
-<div ui-view="main" class="Page"></div>
+    <div ui-view="header"></div>
+    <div ui-view="main"></div>
+    <div ui-view="footer"></div>
 
-<script src="{!! asset('js/vendor.js') !!}"></script>
-<script src="{!! asset('js/app.js') !!}"></script>
-<script src="{!! asset('js/prism.js') !!}"></script>
+    <script src="{!! asset('js/vendor.js') !!}"></script>
+    <script src="{!! asset('js/partials.js') !!}"></script>
+    <script src="{!! asset('js/app.js') !!}"></script>
 
-{{--livereload--}}
-@if ( Config::get('app.debug') )
+    {{--livereload--}}
+    @if ( env('APP_ENV') === 'local' )
     <script type="text/javascript">
-        document.write('<script src="//localhost:35729/livereload.js?snipver=1" type="text/javascript"><\/script>')
+        document.write('<script src="'+ location.protocol + '//' + (location.host.split(':')[0] || 'localhost') +':35729/livereload.js?snipver=1" type="text/javascript"><\/script>')
     </script>
-@endif
+    @endif
 </body>
 </html>
